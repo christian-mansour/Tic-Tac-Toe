@@ -158,11 +158,25 @@ footer {
   cursor: pointer;
   text-align: center;
   font-size: 125px;
+  position: relative;
 }
 
 .cell:hover {
   background-color: #000;
 }
+
+.cell:before {
+  background-color: #00ced1;
+  cursor: pointer;
+  text-align: center;
+  font-size: 125px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left:0;
+  bottom: 0;
+}
+
 
 #table {
   margin: 0 auto;

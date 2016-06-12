@@ -3,6 +3,28 @@ $(document).ready(function() {
     var player = 1;
     $('.turn').html("Player " + player + "'s" + " turn");
 
+  function playerResult(userValue){
+
+    if($('.one').hasClass(userValue) && $('.two').hasClass(userValue) && $('.three').hasClass(userValue)) {
+      return true;
+    } else if ($('.four').hasClass(userValue) && $('.five').hasClass(userValue) && $('.six').hasClass(userValue)) {
+      return true;
+    } else if ($('seven').hasClass(userValue) && $('.eight').hasClass(userValue) && $('.nine').hasClass(userValue)) {
+      return true;
+    } else if ($('.one').hasClass(userValue) && $('.four').hasClass(userValue) && $('.seven').hasClass(userValue)) {
+      return true;
+    } else if ($('.two').hasClass(userValue) && $('.five').hasClass(userValue) && $('.eight').hasClass(userValue)) {
+      return true;
+    } else if ($('three').hasClass(userValue) && $('.six').hasClass(userValue) && $('.nine').hasClass(userValue)) {
+      return true;
+    } else if ($('.one').hasClass(userValue) && $('.five').hasClass(userValue) && $('.nine').hasClass(userValue)) {
+      return true;
+    } else if ($('.three').hasClass(userValue) && $('.five').hasClass(userValue) && $('.seven').hasClass(userValue)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   $('.cell').on('click', function(event){
 
@@ -29,36 +51,11 @@ $(document).ready(function() {
       }
   });
 
-
-  function playerResult(userValue){
-
-    if($('.one').hasClass(userValue) && $('.two').hasClass(userValue) && $('.three').hasClass(userValue)) {
-      return true;
-    } else if ($('.four').hasClass(userValue) && $('.five').hasClass(userValue) && $('.six').hasClass(userValue)) {
-      return true;
-    } else if ($('seven').hasClass(userValue) && $('.eight').hasClass(userValue) && $('.nine').hasClass(userValue)) {
-      return true;
-    } else if ($('.one').hasClass(userValue) && $('.four').hasClass(userValue) && $('.seven').hasClass(userValue)) {
-      return true;
-    } else if ($('.two').hasClass(userValue) && $('.five').hasClass(userValue) && $('.eight').hasClass(userValue)) {
-      return true;
-    } else if ($('three').hasClass(userValue) && $('.six').hasClass(userValue) && $('.nine').hasClass(userValue)) {
-      return true;
-    } else if ($('.one').hasClass(userValue) && $('.five').hasClass(userValue) && $('.nine').hasClass(userValue)) {
-      return true;
-    } else if ($('.three').hasClass(userValue) && $('.five').hasClass(userValue) && $('.seven').hasClass(userValue)) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
   $('form').click(function(){
     $('.cell').removeClass('fa fa-star');
     $('.cell').removeClass('fa fa-paw');
     $('.playerOneWins').empty();
     $('.playerTwoWins').empty();
-
   });
 
 });
