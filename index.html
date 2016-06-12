@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -9,37 +10,42 @@
   <header>Tic Tac Toe</header>
 
   <section class="Score">
-    <h1>X's vs.   O's</h1>
-    <h2> Scoreboard </h2>
-    <div class= "wins">
-      <ul>
-        <li class="playerOneWins"> Player1 Wins </li>
-        <li class="playerTwoWins"> Player2 Wins </li>
-        <li class="ties"> Ties </li>
-      </ul>
+    <h1>Stars vs. Paws</h1>
+      <h2>The Battle is in Your Hands</h2>
   </section>
+
+  <div class="playerOneWins playerTwoWins"></div>
+  <div class="turn"></div>
+
+  <form>
+    <input type="reset" class="reset" value="Reset">
+  </form>
+
 
   <section id="table">
     <div id="row1">
-      <button type="button" id= "cell" class="one"></button>
-      <button type="button" id= "cell" class="two"></button>
-      <button type="button" id= "cell" class="three"></button>
+      <button type="button" class="cell one"></button>
+      <button type="button" class="cell two"></button>
+      <button type="button" class="cell three"></button>
     </div>
     <div id= "row2">
-      <button type="button" id= "cell" class="four"></button>
-      <button type="button" id= "cell" class="five"></button>
-      <button type="button" id= "cell" class="six"></button>
+      <button type="button" class="cell four"></button>
+      <button type="button" class="cell five"></button>
+      <button type="button" class="cell six"></button>
     </div>
     <div id="row3">
-      <button type="button" id= "cell" class="seven"></button>
-      <button type="button" id= "cell" class="eight"></button>
-      <button type="button" id= "cell" class="nine"></button>
+      <button type="button" class="cell seven"></button>
+      <button type="button" class="cell eight"></button>
+      <button type="button" class="cell nine"></button>
     </div>
   </section>
 
+
+
+
   <footer>
-
-
+    <a href="https://www.linkedin.com/in/christianmansour" title="LinkedIn link"><img src="https://cdn1.iconfinder.com/data/icons/capsocial/500/linkedin-128.png"></a>
+    <h3>Made by: C.Mansour</h3>
 
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
